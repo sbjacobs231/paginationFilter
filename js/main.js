@@ -165,7 +165,7 @@ var pageClick = function () {
 		}
 	} else {
 		// Grab solely the number of page id
-		currentPage = parseInt(page.substring(4,5));
+		currentPage = parseInt(page.substring(4));
 	}
 	// Pass Number to function
 	pageDisplay(currentPage);
