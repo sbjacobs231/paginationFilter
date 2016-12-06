@@ -51,6 +51,7 @@ var pageCountInitial = function() {
 	pagesTotal = Math.ceil(studentsToDisplay.length / 10);
 	if (pagesTotal > 1) {
 		// Add previous button
+		$('.page').append('<nav aria-label="Page navigation"><ul class="pagination"></ul></nav>');
 		$('.pagination').append('<li><a href="#" aria-label="Previous" id="prev"><span aria-hidden="true">&laquo;</span></a></li>');
 		// Append pagination buttons
 		for (var i = 1; i < pagesTotal + 1; i++) {
@@ -96,6 +97,11 @@ var pageDisplay = function(page) {
 	removeClassActive();
 }
 /* -------------------     Search Bar    ---------------------- */
+// Create Search Bar
+var searchCreate = function() {
+	$('.page-header').append('<div class="student-search"><input placeholder="Search for students..."><button>Search</button></div>');
+}
+searchCreate();
 //Search Function
 var searchButton = function() {
 	currentPage = 1;
